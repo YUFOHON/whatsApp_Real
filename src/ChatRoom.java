@@ -188,7 +188,7 @@ public class ChatRoom implements Initializable {
                             receivedMessage(wc, in, s[1]);
                             Thread.sleep(10);
                         } else if (command == 2) {
-                            System.out.println("start receiveFile");
+                            System.out.println("start receiveImageFile");
                             fileTransferring = true;
                             receiveImageFile();
                             fileTransferring = false;
@@ -199,6 +199,7 @@ public class ChatRoom implements Initializable {
 
                         } else if (command == 4) {
                             receiveFile();
+                            lock--;
                         }
                     }
 //                    System.out.println("start sleeping");

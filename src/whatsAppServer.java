@@ -193,9 +193,9 @@ public class whatsAppServer {
         //===========================Send File==================================
         if (socketList.containsKey(receiverId)) {
             DataOutputStream toReceiver = new DataOutputStream(socketList.get(receiverId).getOutputStream());
-            toReceiver.writeInt(4);
+            toReceiver.writeInt(2);
             toReceiver.flush();
-            sendString(userId, toReceiver);
+//            sendString(userId, toReceiver);
 //            File fileToReceiver = new File(System.getProperty("user.dir") + "/src/File/" + System.currentTimeMillis() + "_" + receiverId + "_" + filename);
             if (!file.exists() && file.isDirectory())
                 throw new IOException("Invalid path!");
